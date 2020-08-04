@@ -29,7 +29,6 @@ public class IndexController
     @RequestMapping(path = "/edit-employee", method = RequestMethod.GET)
     public String edit(Model model, @RequestParam("id") int id)
     {
-        System.out.println("Param ID = "+id);
         Employee employee = EmployeeDao.findEmployeeById(id);
         model.addAttribute("employee", employee);
         return "edit-employee";
