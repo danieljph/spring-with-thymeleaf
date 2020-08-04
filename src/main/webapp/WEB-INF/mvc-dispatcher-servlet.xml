@@ -10,6 +10,9 @@
     ">
 
 	<mvc:annotation-driven />
+	<mvc:resources mapping="/webjars/**" location="/webjars/">
+		<mvc:resource-chain resource-cache="true"/>
+	</mvc:resources>
 	<context:component-scan base-package="com.infinitium.spring_with_thymeleaf" />
 
 	<bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
